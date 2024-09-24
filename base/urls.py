@@ -4,6 +4,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path("logout/", views.logoutUser, name="logout"),
     path("login/", views.loginPage, name="login"),
     path("", views.home, name="home"),
     # name='room'とすることでurlが"room_hoge/<str:pk>/"に変わっても、template側でも同様にroom_hogeと変更する必要がなくなる。
